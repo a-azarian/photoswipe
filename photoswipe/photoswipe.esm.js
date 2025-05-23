@@ -1,0 +1,1 @@
+/* PhotoSwipe core module */
