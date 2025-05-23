@@ -17,3 +17,18 @@ document.getElementById("open-gallery").addEventListener("click", function(e) {
     firstLink.click();
   }
 });
+
+function adjustGallerySize() {
+  const gallery = document.querySelector('.pswp-gallery');
+  if (gallery) {
+    gallery.style.width = `${window.innerWidth}px`;
+    gallery.style.height = `${window.innerHeight}px`;
+  }
+}
+
+// تنظیم اندازه گالری هنگام بارگذاری صفحه
+window.addEventListener('load', adjustGallerySize);
+
+// تنظیم اندازه هنگام تغییر اندازه یا چرخاندن دستگاه
+window.addEventListener('resize', adjustGallerySize);
+window.addEventListener('orientationchange', adjustGallerySize);
